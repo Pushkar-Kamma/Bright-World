@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Waste Reduction Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+   
+    <style>
+        body {
+            background-color: #004b23;
+            color: #9ef01a;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .quiz-container {
+            max-width: 40vw;
+            margin: 0 auto;
+            padding: 50px;
+            border-radius: 10px;
+            background-color: #333;
+           
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: none;
+            background-color: #9ef01a;
+            color: #004b23;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #79c713;
+        }
+        .option {
+            display: block;
+            margin: 10px 0;
+        }
+        
+    </style>
+    <script>
+        const quizData = [
+        {
+            question: "How often do you use single-use plastic items like bottles or bags?",
+            options: [
+                { text: "Every day", nextQuestion: 1, tip: "Consider reducing your usage of single-use plastics by opting for reusable bottles and bags." },
+                { text: "A few times a week", nextQuestion: 2, tip: "Try to reduce the frequency of using single-use plastics by carrying reusable alternatives." },
+                { text: "Rarely", nextQuestion: 3, tip: "Great job! Keep it up by minimizing single-use plastics even further." },
+                { text: "Never", nextQuestion: 4, tip: "" } 
+            ]
+        },
+        {
+            question: "Do you separate your recyclable materials from regular waste?",
+            options: [
+                { text: "Yes, always", nextQuestion: 5, tip: "" }, 
+                { text: "Most of the time", nextQuestion: 6, tip: "Ensure you always separate recyclables to maximize their potential for reuse." },
+                { text: "Occasionally", nextQuestion: 7, tip: "Separating recyclables is crucial for reducing landfill waste. Make it a consistent habit." },
+                { text: "Never", nextQuestion: 8, tip: "Start separating recyclables to help reduce the burden on landfills and promote sustainability." }
+            ]
+        },
+        {
+            question: "Do you compost food scraps at home?",
+            options: [
+                { text: "Yes", nextQuestion: 9, tip: "" }, 
+                { text: "No", nextQuestion: 10, tip: "Consider starting a compost pile to reduce food waste and create nutrient-rich soil." },
+                { text: "Plan to start soon", nextQuestion: 11, tip: "That's great! Start with a small indoor compost bin or outdoor pile." },
+                { text: "Not interested", nextQuestion: 12, tip: "Composting can significantly reduce food waste. It's easier than you think and highly beneficial." }
+            ]
+        },
+        {
+            question: "How do you dispose of old electronics?",
+            options: [
+                { text: "Recycle at e-waste facility", nextQuestion: 13, tip: "" }, 
+                { text: "Throw in regular trash", nextQuestion: 14, tip: "Electronic waste contains harmful materials. Consider taking them to an e-waste recycling facility." },
+                { text: "Donate", nextQuestion: 15, tip: "Donating old electronics is great! Make sure they are in working condition before donating." },
+                { text: "Store them", nextQuestion: 16, tip: "Consider recycling or donating stored electronics to free up space and reduce waste." }
+            ]
+        },
+        {
+            question: "How often do you buy products with excessive packaging?",
+            options: [
+                { text: "Frequently", nextQuestion: 17, tip: "Try to choose products with minimal or eco-friendly packaging to reduce waste." },
+                { text: "Sometimes", nextQuestion: 18, tip: "Whenever possible, opt for products with less packaging to help reduce overall waste." },
+                { text: "Rarely", nextQuestion: 19, tip: "Good job! Keep supporting brands with sustainable packaging." },
+                { text: "Never", nextQuestion: 20, tip: "" } 
+            ]
+        },
+        {
+            question: "Do you use energy-efficient light bulbs at home?",
+            options: [
+                { text: "Yes, all of them are energy-efficient", nextQuestion: 21, tip: "" }, 
+                { text: "Some of them", nextQuestion: 22, tip: "Consider replacing all light bulbs with energy-efficient ones to save energy and money." },
+                { text: "No", nextQuestion: 23, tip: "Energy-efficient light bulbs can significantly reduce your energy consumption." },
+                { text: "Not sure", nextQuestion: 24, tip: "Check the labels on your bulbs, and replace them with energy-efficient options if possible." }
+            ]
+        },
+        {
+            question: "How often do you use public transportation?",
+            options: [
+                { text: "Daily", nextQuestion: 25, tip: "" }, 
+                { text: "A few times a week", nextQuestion: 26, tip: "Using public transportation more often can help reduce your carbon footprint." },
+                { text: "Rarely", nextQuestion: 27, tip: "Consider using public transportation more frequently to reduce emissions." },
+                { text: "Never", nextQuestion: 28, tip: "Public transportation is an eco-friendly way to travel and reduces individual carbon emissions." }
+            ]
+        },
+        {
+            question: "Do you use a reusable water bottle?",
+            options: [
+                { text: "Yes, always", nextQuestion: 29, tip: "" },
+                { text: "Sometimes", nextQuestion: 30, tip: "Using a reusable water bottle all the time can help reduce plastic waste." },
+                { text: "Rarely", nextQuestion: 31, tip: "Consider investing in a reusable water bottle to minimize plastic waste." },
+                { text: "Never", nextQuestion: 32, tip: "Using a reusable water bottle is a simple way to reduce your plastic consumption." }
+            ]
+        },
+        {
+            question: "Do you take short showers to conserve water?",
+            options: [
+                { text: "Always", nextQuestion: 33, tip: "" },
+                { text: "Most of the time", nextQuestion: 34, tip: "Shorter showers help conserve water. Try to reduce your shower time further." },
+                { text: "Occasionally", nextQuestion: 35, tip: "Taking shorter showers can save a significant amount of water." },
+                { text: "Never", nextQuestion: 36, tip: "Reducing shower time is an easy way to conserve water and lower your utility bills." }
+            ]
+        },
+        {
+            question: "Do you bring your own bags when grocery shopping?",
+            options: [
+                { text: "Always", nextQuestion: 37, tip: "" }, 
+                { text: "Most of the time", nextQuestion: 38, tip: "Bringing your own bags every time helps reduce plastic waste." },
+                { text: "Occasionally", nextQuestion: 39, tip: "Reusable bags are a great way to reduce plastic usage. Make it a habit." },
+                { text: "Never", nextQuestion: 40, tip: "Using reusable bags can significantly reduce plastic waste. Consider keeping some in your car or by the door." }
+            ]
+        },
+        {
+            question: "How do you handle old clothing items?",
+            options: [
+                { text: "Donate or repurpose", nextQuestion: 41, tip: "" }, 
+                { text: "Throw them away", nextQuestion: 42, tip: "Consider donating old clothes or repurposing them into cleaning rags." },
+                { text: "Sell them", nextQuestion: 43, tip: "Selling old clothes is a great way to extend their lifespan and reduce waste." },
+                { text: "Store them", nextQuestion: 44, tip: "If storing them, make sure they are in good condition for future use or donation." }
+            ]
+        },
+        {
+            question: "Do you buy locally grown food?",
+            options: [
+                { text: "Always", nextQuestion: 45, tip: "" }, 
+                { text: "Most of the time", nextQuestion: 46, tip: "Buying locally grown food reduces transportation emissions and supports local farmers." },
+                { text: "Occasionally", nextQuestion: 47, tip: "Consider buying more locally grown food to reduce your carbon footprint." },
+                { text: "Never", nextQuestion: 48, tip: "Locally grown food is fresher and has a smaller environmental impact. Consider supporting local markets." }
+            ]
+        },
+        {
+            question: "Do you avoid buying fast fashion?",
+            options: [
+                { text: "Yes, always", nextQuestion: 49, tip: "" }, 
+                { text: "Sometimes", nextQuestion: 50, tip: "Fast fashion contributes to significant waste. Consider buying quality, sustainable clothing instead." },
+                { text: "Rarely", nextQuestion: 51, tip: "Reducing your fast fashion purchases can help minimize environmental impact." },
+                { text: "Never", nextQuestion: 52, tip: "Avoiding fast fashion can help reduce waste and support sustainable production practices." }
+            ]
+        },
+        {
+            question: "Do you grow your own fruits or vegetables?",
+            options: [
+                { text: "Yes", nextQuestion: 53, tip: "" },
+                { text: "No", nextQuestion: 54, tip: "Growing your own produce can be a rewarding way to reduce your carbon footprint." },
+                { text: "Plan to start soon", nextQuestion: 55, tip: "That's wonderful! Start with easy-to-grow vegetables like tomatoes or herbs." },
+                { text: "Not interested", nextQuestion: 56, tip: "Growing your own produce can reduce packaging waste and ensure fresh food." }
+            ]
+        },
+        {
+            question: "How often do you repair broken items instead of replacing them?",
+            options: [
+                { text: "Always", nextQuestion: 57, tip: "" },
+                { text: "Most of the time", nextQuestion: 58, tip: "Repairing items whenever possible helps reduce waste and saves money." },
+                { text: "Occasionally", nextQuestion: 59, tip: "Consider repairing more often to reduce the need for replacements." },
+                { text: "Never", nextQuestion: 60, tip: "Repairing items is a great way to extend their lifespan and reduce waste." }
+            ]
+        },
+        {
+            question: "Do you limit your use of paper towels?",
+            options: [
+                { text: "Yes, always", nextQuestion: 61, tip: "" },
+                { text: "Most of the time", nextQuestion: 62, tip: "Consider using reusable cloths instead of paper towels to reduce waste." },
+                { text: "Occasionally", nextQuestion: 63, tip: "Limiting paper towel use helps reduce waste and is more cost-effective." },
+                { text: "Never", nextQuestion: 64, tip: "Switching to reusable cloths can significantly reduce paper waste." }
+            ]
+        },
+        {
+            question: "Do you avoid buying bottled water?",
+            options: [
+                { text: "Yes, always", nextQuestion: 65, tip: "" }, 
+                { text: "Most of the time", nextQuestion: 66, tip: "Avoiding bottled water reduces plastic waste. Carry a reusable bottle whenever possible." },
+                { text: "Occasionally", nextQuestion: 67, tip: "Try to avoid bottled water and switch to a reusable water bottle." },
+                { text: "Never", nextQuestion: 68, tip: "Reducing bottled water usage can help minimize plastic pollution." }
+            ]
+        },
+        {
+            question: "Do you turn off lights when not in use?",
+            options: [
+                { text: "Always", nextQuestion: 69, tip: "" }, 
+                { text: "Most of the time", nextQuestion: 70, tip: "Turning off lights when not in use saves energy and reduces your electricity bill." },
+                { text: "Occasionally", nextQuestion: 71, tip: "Make it a habit to turn off lights whenever they are not needed." },
+                { text: "Never", nextQuestion: 72, tip: "Turning off lights helps conserve energy and is an easy way to reduce your carbon footprint." }
+            ]
+        },
+        {
+            question: "Do you unplug electronics when not in use?",
+            options: [
+                { text: "Yes, always", nextQuestion: 73, tip: "" },  
+                { text: "Most of the time", nextQuestion: 74, tip: "Unplugging electronics when not in use helps reduce phantom energy usage." },
+                { text: "Occasionally", nextQuestion: 75, tip: "Consider unplugging electronics more often to save energy." },
+                { text: "Never", nextQuestion: 76, tip: "Unplugging unused electronics can help you save energy and reduce costs." }
+            ]
+        },
+        {
+            question: "Do you participate in community clean-up events?",
+            options: [
+                { text: "Yes, regularly", nextQuestion: 77, tip: "" },   
+                { text: "Sometimes", nextQuestion: 78, tip: "Participating in clean-up events helps keep the environment clean and fosters community spirit." },
+                { text: "Rarely", nextQuestion: 79, tip: "Consider joining more clean-up events to make a positive impact on your community." },
+                { text: "Never", nextQuestion: 80, tip: "Community clean-up events are a great way to contribute to a cleaner environment." }
+            ]
+        },
+        {
+            question: "Do you reduce your paper usage at home and work?",
+            options: [
+                { text: "Yes, always", nextQuestion: 81, tip: "" },    
+                { text: "Most of the time", nextQuestion: 82, tip: "Reducing paper usage helps save trees and minimizes waste." },
+                { text: "Occasionally", nextQuestion: 83, tip: "Consider reducing paper usage by switching to digital alternatives where possible." },
+                { text: "Never", nextQuestion: 84, tip: "Reducing paper usage can significantly decrease your environmental impact." }
+            ]
+        },
+        {
+            question: "Do you carpool or use ride-sharing services?",
+            options: [
+                { text: "Yes, frequently", nextQuestion: 85, tip: "" },    
+                { text: "Sometimes", nextQuestion: 86, tip: "Carpooling can reduce traffic and lower carbon emissions." },
+                { text: "Rarely", nextQuestion: 87, tip: "Consider carpooling more often to help reduce your carbon footprint." },
+                { text: "Never", nextQuestion: 88, tip: "Carpooling is an effective way to save fuel and reduce emissions." }
+            ]
+        },
+        {
+            question: "Do you use a clothesline instead of a dryer?",
+            options: [
+                { text: "Yes, always", nextQuestion: 89, tip: "" },    
+                { text: "Sometimes", nextQuestion: 90, tip: "Using a clothesline can save energy and reduce your electricity bill." },
+                { text: "Rarely", nextQuestion: 91, tip: "Consider using a clothesline more often to save energy." },
+                { text: "Never", nextQuestion: 92, tip: "Using a clothesline instead of a dryer is an easy way to save energy." }
+            ]
+        },
+        {
+            question: "Do you use eco-friendly cleaning products?",
+            options: [
+                { text: "Yes, always", nextQuestion: 93, tip: "" },    
+                { text: "Sometimes", nextQuestion: 94, tip: "Eco-friendly cleaning products are safer for the environment and your health." },
+                { text: "Rarely", nextQuestion: 95, tip: "Consider switching to eco-friendly cleaning products to reduce harmful chemicals." },
+                { text: "Never", nextQuestion: 96, tip: "Using eco-friendly cleaning products can help reduce pollution and protect the environment." }
+            ]
+        },
+        {
+            question: "Do you avoid using plastic straws?",
+            options: [
+                { text: "Yes, always", nextQuestion: 97, tip: "" },    
+                { text: "Most of the time", nextQuestion: 98, tip: "Avoiding plastic straws helps reduce plastic waste in oceans." },
+                { text: "Occasionally", nextQuestion: 99, tip: "Consider using reusable or no straws to help reduce plastic pollution." },
+                { text: "Never", nextQuestion: 100, tip: "Plastic straws contribute to pollution. Try switching to reusable alternatives." }
+            ]
+        },
+        {
+question: "Do you support or donate to environmental organizations?",
+
+            options: [
+                { text: "Yes, regularly", nextQuestion: 101, tip: "" },    
+                { text: "Sometimes", nextQuestion: 102, tip: "Supporting environmental organizations can help further their conservation efforts." },
+                { text: "Rarely", nextQuestion: 103, tip: "Consider donating to organizations that work towards environmental sustainability." },
+                { text: "Never", nextQuestion: 104, tip: "Supporting environmental organizations can amplify your impact on sustainability." }
+            ]
+        }
+        ];
+
+        let currentQuestionIndex = 0;
+        let userResponses = [];
+        let collectedTips = [];
+
+        function loadQuestion() {
+            const quizContainer = document.querySelector(".quiz-container");
+            quizContainer.innerHTML = `
+                <h1>Personalized Waste Reduction Quiz</h1>
+                <div id="question"></div>
+                <div id="options"></div>
+            `;
+            const questionElement = document.getElementById("question");
+            const optionsElement = document.getElementById("options");
+            const currentQuestion = quizData[currentQuestionIndex];
+
+            questionElement.textContent = currentQuestion.question;
+            optionsElement.innerHTML = "";
+
+            currentQuestion.options.forEach((option) => {
+                const button = document.createElement("button");
+                button.classList.add("option");
+                button.textContent = option.text;
+                button.addEventListener("click", () => {
+                    userResponses.push(option.text);
+                    if (option.tip) {
+                        collectedTips.push(option.tip);
+                    }
+                    currentQuestionIndex = option.nextQuestion;
+                    if (currentQuestionIndex < quizData.length) {
+                        loadQuestion();
+                    } else {
+                        showResults();
+                    }
+                });
+                optionsElement.appendChild(button);
+            });
+        }
+
+        function showResults() {
+            const quizContainer = document.querySelector(".quiz-container");
+            quizContainer.innerHTML = "<h2>Quiz Completed</h2>";
+            quizContainer.innerHTML += `<p>Thank you for completing the quiz! Here are your responses:</p>`;
+            userResponses.forEach((response, index) => {
+                quizContainer.innerHTML += `<p>Question ${index + 1}: ${response}</p>`;
+            });
+            quizContainer.innerHTML += `<h3>Personalized Tips for Reducing Waste:</h3>`;
+
+            // Display collected tips
+            if (collectedTips.length > 0) {
+                collectedTips.forEach((tip) => {
+                    quizContainer.innerHTML += `<p>${tip}</p>`;
+                });
+            } else {
+                quizContainer.innerHTML += `<p>No specific tips available based on your responses. Keep up the good work!</p>`;
+            }
+
+            // Add button to retake the quiz
+            const retakeButton = document.createElement("button");
+            retakeButton.textContent = "Retake Quiz";
+            retakeButton.addEventListener("click", () => {
+                currentQuestionIndex = 0;
+                userResponses = [];
+                collectedTips = [];
+                loadQuestion();
+            });
+            quizContainer.appendChild(retakeButton);
+        }
+
+        window.onload = loadQuestion;
+    </script>
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="search_by_name.html" class="nav-item">Search by Name</a>
+            <a href="calc.html" class="nav-item">Calculate Carbon Footprint</a>
+            <a href="articles.html" class="nav-item">Leaderboard</a>
+            <button class="nav-toggle" id="navToggle">☰</button>
+        </div>
+        <div class="navbar-links" id="navbarLinks">
+            <a href="#home" class="nav-item">Home</a>
+            <a href="search_by_name.html" class="nav-item">Search by Name</a>
+            <a href="calc.html" class="nav-item">Carbon Footprint</a>
+            <a href="articles.html" class="nav-item">Leaderboard</a>
+        </div>
+    </nav>
+    
+    <div class="quiz-container">
+        <h1>Personalized Waste Reduction Quiz</h1>
+        <div id="question"></div>
+        <div id="options"></div>
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+   <!-- Navigation Bar -->
+   <nav class="navbar">
+    <div class="navbar-container">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="search_by_name.html" class="nav-item">Search by Name</a>
+        <a href="calc.html" class="nav-item">Calculate Carbon Footprint</a>
+        <a href="articles.html" class="nav-item">Leaderboard</a>
+        <button class="nav-toggle" id="navToggle">☰</button>
+    </div>
+    <div class="navbar-links" id="navbarLinks">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="search_by_name.html" class="nav-item">Search by Name</a>
+        <a href="calc.html" class="nav-item">Calculate Carbon Footprint</a>
+        <a href="articles.html" class="nav-item">Leaderboard</a>
+    </div>
+</nav>
+<!-- Title Below Navbar -->
+<div class="leaderboard-title">
+    <h1>Leaderboard</h1>
+</div>
+
+<!-- Chart Section -->
+<div class="chartCard">
+    <div class="chartBox">
+        <canvas id="myChart"></canvas>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+<script src="scripts.js"></script>
+<style>
+     /* Leaderboard Title Styling */
+     .leaderboard-title {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .leaderboard-title h1 {
+        color: white;
+        font-size: 36px;
+    }
+
+    .chartCard {
+        width: 100vw;
+        height: calc(100vh - 40px);
+        background: #1A7431;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .chartBox {
+        width: 60vw;
+        height: 600px;
+        padding: 20px;
+        border-radius: 20px;
+        border: solid 3px #6EDE8A;
+        background: white;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+    .chartMenu {
+      width: 100vw;
+      height: 100px;
+      background: #1A1A1A;
+      color: #2DC653;
+    }
+    .chartMenu p {
+      padding: 10px;
+      font-size: 20px;
+    }
+    .chartCard {
+      width: 100vw;
+      height: calc(100vh - 40px);
+      background: #1A7431;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .chartBox {
+      width: 60vw;
+      height: 600px;
+      padding: 20px;
+      border-radius: 20px;
+      border: solid 3px #6EDE8A;
+      background: white;
+    }
+  </style>
+</head>
+<body>
+  
+ 
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+  <script>
+  // setup 
+  const data = {
+      labels:['Hungary', 'Pakistan', 'Timor-Leste', 'Azerbaijan', 'Madagascar', 'Malaysia', 'Cyprus', 'San Marino', 'Tajikistan', 'France', 'Cambodia', 
+      'Senegal', 'Argentina', 'Jordan', 'Central African Republic', 'Iraq', 'Guinea-Bissau', 'Moldova', 'Fiji', 'Sweden', 'Yemen', 'Comoros', 'Malawi', 
+      'Nigeria', 'United Arab Emirates', 'Israel', 'Latvia', 'Paraguay', 'Croatia', 'Uganda', 'Bosnia and Herzegovina', 'Guatemala', 'Singapore', 'Antigua and Barbuda', 
+      'Angola', 'Mongolia', 'Canada', 'Tunisia', 'Barbados', 'Belarus', 'Egypt', 'Taiwan', 'Nauru', 'Finland', 'Honduras', 'Burkina Faso', 'Bangladesh', 'Papua New Guinea', 'Tonga', 
+      'North Korea', 'Micronesia', 'South Korea', 'Sierra Leone', 'Vietnam', 'Solomon Islands', 'Mauritania', 'Saint Kitts and Nevis', 'Uruguay', 'Denmark', 'Georgia', 'Serbia', 'Greece', 
+      'Samoa', 'Monaco', 'Bhutan', 'Botswana', 'Saint Vincent and the Grenadines', 'Belgium', 'Colombia', 'Kazakhstan', 'Dominica', 'Mali', 'Niger', 'Syria', 'Poland', 'Kenya', 'Gabon', 'Japan', 
+      'Peru', 'Ukraine', 'Ghana', 'Ireland', 'Romania', 'Brazil', 'Spain', 'Afghanistan', 'Turkmenistan', 'Gambia', 'Mauritius', 'Panama', 'North Macedonia', 'Luxembourg', 'Benin', 'Costa Rica', 
+      'Brunei', 'Laos', 'Slovakia', 'Liechtenstein', 'Cuba', 'Saint Lucia', 'Saudi Arabia', 'Malta', 'Palau', 'Togo', 'Burundi', 'Portugal', 'Dominican Republic', 'Lithuania', 'Belize', 'Venezuela', 
+      'Suriname', 'Netherlands', 'Grenada', 'Ecuador', 'Vatican City', 'Liberia', 'Tanzania', 'Cabo Verde', 'Eswatini', 'Andorra', 'Australia', 'Cameroon', 'Sao Tome and Principe', 'Bolivia', 'Jamaica', 
+      'Sri Lanka', 'Mozambique', 'Sudan', 'Maldives', 'Kuwait', 'Trinidad and Tobago', 'Uzbekistan', 'Djibouti', 'Somalia', 'Thailand', 'Congo', 'Turkey', 'Qatar', 'India', 'Austria', 'Oman', 'Rwanda', 
+      'Estonia', 'New Zealand', 'Morocco', 'Philippines', 'Eritrea', 'Italy', 'Mexico', 'Lebanon', 'Ivory Coast', 'Norway', 'United States', 'China', 'Chile', 'Iran', 
+      'South Sudan', 'Marshall Islands', 'Armenia'],
+    datasets: [{
+      label: 'Waste Generated (In Metric Tons)',
+      data:[2.86, 3.58, 8.39, 10.39, 12.81, 14.93, 16.45, 17.27, 18.93, 19.56, 20.31, 22.67, 23.11, 24.23, 25.17, 26.09, 27.93, 28.14, 30.12, 32.81, 34.95, 36.43, 37.55, 38.62, 39.99, 41.08, 42.13, 43.39, 44.02, 45.26, 46.74, 47.88, 48.25, 49.87, 50.92, 52.14, 54.23, 55.67, 56.74, 57.32, 59.16, 61.04, 62.39, 63.81, 64.97, 66.12, 67.88, 69.22, 70.55, 72.03, 73.12, 74.45, 75.18, 76.44, 77.91, 79.22, 80.67, 82.45, 83.18, 84.99, 85.64, 86.29, 87.58, 88.39, 89.22, 90.18, 91.79, 92.33, 93.45, 94.62, 95.33, 96.15, 97.42, 98.01, 99.12, 100.48, 101.32, 102.71, 103.99, 104.56, 105.68, 106.83, 107.94, 109.25, 110.79, 112.14, 113.67, 114.83, 115.27, 116.45, 117.89, 118.22, 119.76, 120.99, 121.54, 122.73, 124.89, 125.92, 126.81, 127.34, 128.79, 130.26, 131.47, 132.64, 133.89, 134.18, 135.42, 136.78, 137.93, 139.28, 140.67, 141.22, 142.81, 144.45, 145.39, 146.18, 147.54, 149.23, 150.11, 151.87, 152.39, 153.89, 154.45, 156.18, 157.23, 158.67, 159.22, 160.39, 161.54, 162.87, 163.23, 164.18, 165.73, 167.11, 168.54, 169.99, 170.34, 171.77, 172.88, 173.45, 174.92, 176.13, 177.66, 179.28, 180.45, 181.34, 182.93, 183.57, 184.12, 185.22, 186.68, 187.39, 188.54, 189.93, 191.88, 192.39, 193.67, 194.45, 195.82],
+      backgroundColor:['rgba(255, 255, 255, 0.2)', 'rgba(253, 255, 253, 0.2)', 'rgba(251, 255, 251, 0.2)', 'rgba(250, 255, 250, 0.2)', 'rgba(248, 255, 248, 0.2)', 'rgba(246, 255, 246, 0.2)', 'rgba(245, 255, 245, 0.2)', 'rgba(243, 255, 243, 0.2)', 'rgba(242, 255, 242, 0.2)', 'rgba(240, 255, 240, 0.2)', 'rgba(238, 255, 238, 0.2)', 'rgba(237, 255, 237, 0.2)', 'rgba(235, 255, 235, 0.2)', 'rgba(234, 255, 234, 0.2)', 'rgba(232, 255, 232, 0.2)', 'rgba(230, 255, 230, 0.2)', 'rgba(229, 255, 229, 0.2)', 'rgba(227, 255, 227, 0.2)', 'rgba(225, 255, 225, 0.2)', 'rgba(224, 255, 224, 0.2)', 'rgba(222, 255, 222, 0.2)', 'rgba(221, 255, 221, 0.2)', 'rgba(219, 255, 219, 0.2)', 'rgba(217, 255, 217, 0.2)', 'rgba(216, 255, 216, 0.2)', 'rgba(214, 255, 214, 0.2)', 'rgba(213, 255, 213, 0.2)', 'rgba(211, 255, 211, 0.2)', 'rgba(209, 255, 209, 0.2)', 'rgba(208, 255, 208, 0.2)', 'rgba(206, 255, 206, 0.2)', 'rgba(204, 255, 204, 0.2)', 'rgba(203, 255, 203, 0.2)', 'rgba(201, 255, 201, 0.2)', 'rgba(200, 255, 200, 0.2)', 'rgba(198, 255, 198, 0.2)', 'rgba(196, 255, 196, 0.2)', 'rgba(195, 255, 195, 0.2)', 'rgba(193, 255, 193, 0.2)', 'rgba(192, 255, 192, 0.2)', 'rgba(190, 255, 190, 0.2)', 'rgba(188, 255, 188, 0.2)', 'rgba(187, 255, 187, 0.2)', 'rgba(185, 255, 185, 0.2)', 'rgba(183, 255, 183, 0.2)', 'rgba(182, 255, 182, 0.2)', 'rgba(180, 255, 180, 0.2)', 'rgba(179, 255, 179, 0.2)', 'rgba(177, 255, 177, 0.2)', 'rgba(175, 255, 175, 0.2)', 'rgba(174, 255, 174, 0.2)', 'rgba(172, 255, 172, 0.2)', 'rgba(171, 255, 171, 0.2)', 'rgba(169, 255, 169, 0.2)', 'rgba(167, 255, 167, 0.2)', 'rgba(166, 255, 166, 0.2)', 'rgba(164, 255, 164, 0.2)', 'rgba(163, 255, 163, 0.2)', 'rgba(161, 255, 161, 0.2)', 'rgba(159, 255, 159, 0.2)', 'rgba(158, 255, 158, 0.2)', 'rgba(156, 255, 156, 0.2)', 'rgba(154, 255, 154, 0.2)', 'rgba(153, 255, 153, 0.2)', 'rgba(151, 255, 151, 0.2)', 'rgba(150, 255, 150, 0.2)', 'rgba(148, 255, 148, 0.2)', 'rgba(146, 255, 146, 0.2)', 'rgba(145, 255, 145, 0.2)', 'rgba(143, 255, 143, 0.2)', 'rgba(142, 255, 142, 0.2)', 'rgba(140, 255, 140, 0.2)', 'rgba(138, 255, 138, 0.2)', 'rgba(137, 255, 137, 0.2)', 'rgba(135, 255, 135, 0.2)', 'rgba(133, 255, 133, 0.2)', 'rgba(132, 255, 132, 0.2)', 'rgba(130, 255, 130, 0.2)', 'rgba(129, 255, 129, 0.2)', 'rgba(127, 255, 127, 0.2)', 'rgba(125, 255, 125, 0.2)', 'rgba(124, 255, 124, 0.2)', 'rgba(122, 255, 122, 0.2)', 'rgba(121, 255, 121, 0.2)', 'rgba(119, 255, 119, 0.2)', 'rgba(117, 255, 117, 0.2)', 'rgba(116, 255, 116, 0.2)', 'rgba(114, 255, 114, 0.2)', 'rgba(112, 255, 112, 0.2)', 'rgba(111, 255, 111, 0.2)', 'rgba(109, 255, 109, 0.2)', 'rgba(108, 255, 108, 0.2)', 'rgba(106, 255, 106, 0.2)', 'rgba(104, 255, 104, 0.2)', 'rgba(103, 255, 103, 0.2)', 'rgba(101, 255, 101, 0.2)', 'rgba(100, 255, 100, 0.2)', 'rgba(98, 255, 98, 0.2)', 'rgba(96, 255, 96, 0.2)', 'rgba(95, 255, 95, 0.2)', 'rgba(93, 255, 93, 0.2)', 'rgba(91, 255, 91, 0.2)', 'rgba(90, 255, 90, 0.2)', 'rgba(88, 255, 88, 0.2)', 'rgba(87, 255, 87, 0.2)', 'rgba(85, 255, 85, 0.2)', 'rgba(83, 255, 83, 0.2)', 'rgba(82, 255, 82, 0.2)', 'rgba(80, 255, 80, 0.2)', 'rgba(79, 255, 79, 0.2)', 'rgba(77, 255, 77, 0.2)', 'rgba(75, 255, 75, 0.2)', 'rgba(74, 255, 74, 0.2)', 'rgba(72, 255, 72, 0.2)', 'rgba(71, 255, 71, 0.2)', 'rgba(69, 255, 69, 0.2)', 'rgba(67, 255, 67, 0.2)', 'rgba(66, 255, 66, 0.2)', 'rgba(64, 255, 64, 0.2)', 'rgba(62, 255, 62, 0.2)', 'rgba(61, 255, 61, 0.2)', 'rgba(59, 255, 59, 0.2)', 'rgba(58, 255, 58, 0.2)', 'rgba(56, 255, 56, 0.2)', 'rgba(54, 255, 54, 0.2)', 'rgba(53, 255, 53, 0.2)', 'rgba(51, 255, 51, 0.2)', 'rgba(50, 255, 50, 0.2)', 'rgba(48, 255, 48, 0.2)', 'rgba(46, 255, 46, 0.2)', 'rgba(45, 255, 45, 0.2)', 'rgba(43, 255, 43, 0.2)', 'rgba(41, 255, 41, 0.2)', 'rgba(40, 255, 40, 0.2)', 'rgba(38, 255, 38, 0.2)', 'rgba(37, 255, 37, 0.2)', 'rgba(35, 255, 35, 0.2)', 'rgba(33, 255, 33, 0.2)', 'rgba(32, 255, 32, 0.2)', 'rgba(30, 255, 30, 0.2)', 'rgba(29, 255, 29, 0.2)', 'rgba(27, 255, 27, 0.2)', 'rgba(25, 255, 25, 0.2)', 'rgba(24, 255, 24, 0.2)', 'rgba(22, 255, 22, 0.2)', 'rgba(20, 255, 20, 0.2)', 'rgba(19, 255, 19, 0.2)', 'rgba(17, 255, 17, 0.2)', 'rgba(16, 255, 16, 0.2)', 'rgba(14, 255, 14, 0.2)', 'rgba(12, 255, 12, 0.2)', 'rgba(11, 255, 11, 0.2)', 'rgba(9, 255, 9, 0.2)', 'rgba(8, 255, 8, 0.2)', 'rgba(6, 255, 6, 0.2)', 'rgba(4, 255, 4, 0.2)', 'rgba(3, 255, 3, 0.2)', 'rgba(1, 255, 1, 0.2)', 'rgba(0, 255, 0, 0.2)'],
+      borderColor:['rgba(132, 204, 61, 0.2)', 'rgba(131, 204, 60, 0.2)', 'rgba(130, 204, 60, 0.2)', 'rgba(129, 204, 60, 0.2)', 'rgba(129, 205, 60, 0.2)', 'rgba(128, 205, 59, 0.2)', 'rgba(127, 205, 59, 0.2)', 'rgba(126, 206, 59, 0.2)', 'rgba(125, 206, 58, 0.2)', 'rgba(124, 206, 58, 0.2)', 'rgba(123, 207, 58, 0.2)', 'rgba(122, 207, 57, 0.2)', 'rgba(121, 207, 57, 0.2)', 'rgba(120, 208, 57, 0.2)', 'rgba(119, 208, 57, 0.2)', 'rgba(118, 208, 56, 0.2)', 'rgba(117, 209, 56, 0.2)', 'rgba(116, 209, 56, 0.2)', 'rgba(115, 209, 55, 0.2)', 'rgba(114, 210, 55, 0.2)', 'rgba(113, 210, 55, 0.2)', 'rgba(112, 210, 54, 0.2)', 'rgba(111, 211, 54, 0.2)', 'rgba(110, 211, 54, 0.2)', 'rgba(108, 211, 53, 0.2)', 'rgba(107, 212, 53, 0.2)', 'rgba(106, 212, 53, 0.2)', 'rgba(105, 212, 52, 0.2)', 'rgba(104, 213, 52, 0.2)', 'rgba(103, 213, 52, 0.2)', 'rgba(102, 213, 51, 0.2)', 'rgba(101, 214, 51, 0.2)', 'rgba(99, 214, 51, 0.2)', 'rgba(98, 214, 50, 0.2)', 'rgba(97, 214, 50, 0.2)', 'rgba(96, 215, 50, 0.2)', 'rgba(95, 215, 49, 0.2)', 'rgba(94, 215, 49, 0.2)', 'rgba(92, 216, 49, 0.2)', 'rgba(91, 216, 48, 0.2)', 'rgba(90, 216, 48, 0.2)', 'rgba(89, 217, 48, 0.2)', 'rgba(87, 217, 47, 0.2)', 'rgba(86, 217, 47, 0.2)', 'rgba(85, 218, 47, 0.2)', 'rgba(84, 218, 46, 0.2)', 'rgba(82, 218, 46, 0.2)', 'rgba(81, 219, 46, 0.2)', 'rgba(80, 219, 45, 0.2)', 'rgba(78, 219, 45, 0.2)', 'rgba(77, 220, 45, 0.2)', 'rgba(76, 220, 44, 0.2)', 'rgba(74, 220, 44, 0.2)', 'rgba(73, 221, 44, 0.2)', 'rgba(72, 221, 43, 0.2)', 'rgba(70, 221, 43, 0.2)', 'rgba(69, 222, 43, 0.2)', 'rgba(68, 222, 42, 0.2)', 'rgba(66, 222, 42, 0.2)', 'rgba(65, 223, 41, 0.2)', 'rgba(63, 223, 41, 0.2)', 'rgba(62, 223, 41, 0.2)', 'rgba(60, 224, 40, 0.2)', 'rgba(59, 224, 40, 0.2)', 'rgba(58, 224, 40, 0.2)', 'rgba(56, 224, 39, 0.2)', 'rgba(55, 225, 39, 0.2)', 'rgba(53, 225, 38, 0.2)', 'rgba(52, 225, 38, 0.2)', 'rgba(50, 226, 38, 0.2)', 'rgba(49, 226, 37, 0.2)', 'rgba(47, 226, 37, 0.2)', 'rgba(46, 227, 37, 0.2)', 'rgba(44, 227, 36, 0.2)', 'rgba(42, 227, 36, 0.2)', 'rgba(41, 228, 35, 0.2)', 'rgba(39, 228, 35, 0.2)', 'rgba(38, 228, 35, 0.2)', 'rgba(36, 229, 34, 0.2)', 'rgba(35, 229, 34, 0.2)', 'rgba(34, 229, 34, 0.2)', 'rgba(33, 230, 35, 0.2)', 'rgba(33, 230, 36, 0.2)', 'rgba(32, 230, 37, 0.2)', 'rgba(32, 231, 38, 0.2)', 'rgba(32, 231, 38, 0.2)', 'rgba(31, 231, 39, 0.2)', 'rgba(31, 232, 40, 0.2)', 'rgba(30, 232, 41, 0.2)', 'rgba(30, 232, 42, 0.2)', 'rgba(30, 233, 43, 0.2)', 'rgba(29, 233, 44, 0.2)', 'rgba(29, 233, 45, 0.2)', 'rgba(28, 234, 46, 0.2)', 'rgba(28, 234, 47, 0.2)', 'rgba(28, 234, 48, 0.2)', 'rgba(27, 234, 49, 0.2)', 'rgba(27, 235, 50, 0.2)', 'rgba(26, 235, 51, 0.2)', 'rgba(26, 235, 52, 0.2)', 'rgba(26, 236, 53, 0.2)', 'rgba(25, 236, 54, 0.2)', 'rgba(25, 236, 55, 0.2)', 'rgba(24, 237, 56, 0.2)', 'rgba(24, 237, 57, 0.2)', 'rgba(23, 237, 58, 0.2)', 'rgba(23, 238, 59, 0.2)', 'rgba(23, 238, 60, 0.2)', 'rgba(22, 238, 61, 0.2)', 'rgba(22, 239, 62, 0.2)', 'rgba(21, 239, 63, 0.2)', 'rgba(21, 239, 64, 0.2)', 'rgba(20, 240, 65, 0.2)', 'rgba(20, 240, 66, 0.2)', 'rgba(20, 240, 68, 0.2)', 'rgba(19, 241, 69, 0.2)', 'rgba(19, 241, 70, 0.2)', 'rgba(18, 241, 71, 0.2)', 'rgba(18, 242, 72, 0.2)', 'rgba(17, 242, 73, 0.2)', 'rgba(17, 242, 74, 0.2)', 'rgba(17, 243, 76, 0.2)', 'rgba(16, 243, 77, 0.2)', 'rgba(16, 243, 78, 0.2)', 'rgba(15, 244, 79, 0.2)', 'rgba(15, 244, 80, 0.2)', 'rgba(14, 244, 82, 0.2)', 'rgba(14, 244, 83, 0.2)', 'rgba(13, 245, 84, 0.2)', 'rgba(13, 245, 85, 0.2)', 'rgba(13, 245, 87, 0.2)', 'rgba(12, 246, 88, 0.2)', 'rgba(12, 246, 89, 0.2)', 'rgba(11, 246, 90, 0.2)', 'rgba(11, 247, 92, 0.2)', 'rgba(10, 247, 93, 0.2)', 'rgba(10, 247, 94, 0.2)', 'rgba(9, 248, 96, 0.2)', 'rgba(9, 248, 97, 0.2)', 'rgba(8, 248, 98, 0.2)', 'rgba(8, 249, 100, 0.2)', 'rgba(8, 249, 101, 0.2)', 'rgba(7, 249, 102, 0.2)', 'rgba(7, 250, 104, 0.2)', 'rgba(6, 250, 105, 0.2)', 'rgba(6, 250, 106, 0.2)', 'rgba(5, 251, 108, 0.2)', 'rgba(5, 251, 109, 0.2)', 'rgba(4, 251, 111, 0.2)', 'rgba(4, 252, 112, 0.2)', 'rgba(3, 252, 114, 0.2)', 'rgba(3, 252, 115, 0.2)', 'rgba(2, 253, 116, 0.2)', 'rgba(2, 253, 118, 0.2)', 'rgba(1, 253, 119, 0.2)', 'rgba(1, 254, 121, 0.2)', 'rgba(0, 254, 122, 0.2)', 'rgba(0, 254, 124, 0.2)', 'rgba(0, 255, 125, 0.2)'],
+      borderWidth: 1
+    }]
+  };
+
+  // config 
+  const config = {
+    type: 'bar',
+    data,
+    options: {
+      indexAxis: 'y',
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  };
+
+  // render init block
+  const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+
+  // Instantly assign Chart.js version
+  const chartVersion = document.getElementById('chartVersion');
+  chartVersion.innerText = Chart.version;
+
+// Example usage:
+console.log(getRandomColor());
+
+  </script>
+<body>

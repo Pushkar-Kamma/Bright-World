@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#home" class="nav-item">Home</a>
+            <a href="search_by_name.html" class="nav-item">Search by Name</a>
+            <a href="calc.html" class="nav-item">Calculate Carbon Footprint</a>
+            <a href="articles.html" class="nav-item">LeaderBoard</a>
+            <button class="nav-toggle" id="navToggle">☰</button>
+        </div>
+        <div class="navbar-links" id="navbarLinks">
+            <a href="#home" class="nav-item">Home</a>
+            <a href="search_by_name.html" class="nav-item">Search by Name</a>
+            <a href="calc.html" class="nav-item">Calculate Carbon Footprint</a>
+            <a href="articles.html" class="nav-item">Leaderboard</a>
+        </div>
+    </nav>
+
+
+    <main>
+
+        <section class="search-bar">
+            <h1>Waste Management Made Easy</h1>
+        </section>
+
+
+<section class="main-features">
+    <div class="feature-box" id="feature-name">
+        <h2>Trash</h2>
+        <p>Trash generated in the world since you have been on this website: <span id="Wtrash">0</span> Tons</p>
+    </div>
+    <div class="feature-box" id="feature-plastic">
+        <h2>Plastic Waste</h2>
+        <p>Plastic waste generated in the world since you have been on this website: <span id="Ptrash">0</span> Kilograms</p>
+    </div>
+    <div class="feature-box" id="feature-electronics">
+        <h2>Electronic Waste</h2>
+        <p>Electronic waste generated in the world since you have been on this website: <span id="Etrash">0</span> Kilograms</p>
+    </div>
+    <div class="feature-box" id="feature-food">
+        <h2>Food Waste</h2>
+        <p>Food waste generated in the world since you have been on this website: <span id="Ftrash">0</span> Kilograms</p>
+    </div>
+    <div class="feature-box" id="feature-cost">
+        <h2>Cost of Generated Trash</h2>
+        <p>Total monetary cost of trash generated since you have been on this website: $<span id="Mtrash">0</span></p>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+    <footer>
+        <p>&copy; 2024 Waste Management. All Rights Reserved.</p>
+    </footer>
+
+   
+    <script>
+        let timeSpent = 0;
+
+        function Wtrash(timeSpent) { return Math.round(timeSpent * 67); }
+        function Ptrash(timeSpent) { return Math.round(timeSpent * 9514); }
+        function Etrash(timeSpent) { return Math.round(timeSpent * 1585); }
+        function Ftrash(timeSpent) { return Math.round(timeSpent * 41227); }
+        function Mtrash(timeSpent) { return Math.round(timeSpent * 41222); }
+
+        function updateTimeSpent() {
+            timeSpent += 0.1; // Increment time by 1 second
+            document.getElementById('Wtrash').textContent = Wtrash(timeSpent);
+            document.getElementById('Ptrash').textContent = Ptrash(timeSpent);
+            document.getElementById('Etrash').textContent = Etrash(timeSpent);
+            document.getElementById('Ftrash').textContent = Ftrash(timeSpent);
+            document.getElementById('Mtrash').textContent = Mtrash(timeSpent);
+        }
+
+        setInterval(updateTimeSpent, 100); // Update every second
+    </script>
+</body>
+</html>

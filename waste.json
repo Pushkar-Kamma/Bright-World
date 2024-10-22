@@ -1,0 +1,207 @@
+[ { "name": "Aluminum can", "type": "recycle" }, { "name": "Plastic bottle", "type": "recycle" }, { "name": "Cardboard box", "type": "recycle" }, { "name": "Glass jar", "type": "recycle" }, { "name": "Newspaper", "type": "recycle" }, { "name": "Steel can", "type": "recycle" }, { "name": "Cereal box", "type": "recycle" }, { "name": "Milk carton", "type": "recycle" }, { "name": "Magazine", "type": "recycle" }, { "name": "Paper towel tube", "type": "recycle" }, { "name": "Pizza box (clean)", "type": "recycle" }, { "name": "Catalog", "type": "recycle" }, { "name": "Plastic jug", "type": "recycle" }, { "name": "Soda can", "type": "recycle" }, { "name": "Wine bottle", "type": "recycle" }, { "name": "Shoe box", "type": "recycle" }, { "name": "Toilet paper roll", "type": "recycle" }, { "name": "Notebook", "type": "recycle" }, { "name": "Envelopes (no plastic)", "type": "recycle" }, { "name": "Paperback book", "type": "recycle" }, { "name": "Printer paper", "type": "recycle" }, { "name": "Business cards", "type": "recycle" }, { "name": "Gift wrap (no glitter)", "type": "recycle" }, { "name": "Egg carton", "type": "recycle" }, { "name": "Paper bag", "type": "recycle" }, { "name": "Junk mail", "type": "recycle" }, { "name": "Plastic food container", "type": "recycle" }, { "name": "Plastic cup", "type": "recycle" }, { "name": "Glass vase", "type": "recycle" }, { "name": "Water bottle", "type": "recycle" }, { "name": "Soft drink can", "type": "recycle" }, { "name": "Chocolate box", "type": "recycle" }, { "name": "Brochure", "type": "recycle" }, { "name": "Gift box", "type": "recycle" }, { "name": "File folder", "type": "recycle" }, { "name": "Juice box", "type": "recycle" }, { "name": "Coffee cup sleeve", "type": "recycle" }, { "name": "Plastic utensil", "type": "recycle" }, { "name": "Glass mug", "type": "recycle" }, { "name": "Detergent bottle", "type": "recycle" }, { "name": "Shampoo bottle", "type": "recycle" }, { "name": "Conditioner bottle", "type": "recycle" }, { "name": "Liquid soap bottle", "type": "recycle" }, { "name": "Dish soap bottle", "type": "recycle" }, { "name": "Yogurt container", "type": "recycle" }, { "name": "Cottage cheese tub", "type": "recycle" }, { "name": "Butter tub", "type": "recycle" }, { "name": "Plastic clamshell", "type": "recycle" }, { "name": "Salad container", "type": "recycle" }, { "name": "Plastic wrap core", "type": "recycle" }, { "name": "Aluminum foil", "type": "recycle" }, { "name": "Tin foil", "type": "recycle" }, { "name": "Cookie tin", "type": "recycle" }, { "name": "Metal jar lid", "type": "recycle" }, { "name": "Glass bottle", "type": "recycle" }, { "name": "Plastic detergent pod container", "type": "recycle" }, { "name": "Ice cream tub", "type": "recycle" }, { "name": "Laundry detergent box", "type": "recycle" }, { "name": "Paperboard packaging", "type": "recycle" }, { "name": "Aluminum tray", "type": "recycle" }, { "name": "Plastic hanger", "type": "recycle" }, { "name": "Wire hanger", "type": "recycle" }, { "name": "Plastic plant pot", "type": "recycle" }, { "name": "Glass perfume bottle", "type": "recycle" }, { "name": "Plastic toy", "type": "recycle" }, { "name": "Steel pot", "type": "recycle" }, { "name": "Aluminum pan", "type": "recycle" }, { "name": "Plastic bucket", "type": "recycle" }, { "name": "Cardboard tube", "type": "recycle" }, { "name": "Gift bag", "type": "recycle" }, { "name": "Plastic packaging", "type": "recycle" }, { "name": "Foil lid", "type": "recycle" }, { "name": "Cloth tote bag", "type": "recycle" }, { "name": "Stainless steel bottle", "type": "recycle" }, { "name": "Copper pipe", "type": "recycle" }, { "name": "Brass fittings", "type": "recycle" }, { "name": "Plastic folder", "type": "recycle" }, { "name": "Paper coffee cup (clean)", "type": "recycle" }, { "name": "Plastic film (certain types)", "type": "recycle" }, { "name": "Metal coffee can", "type": "recycle" }, { "name": "Soup can", "type": "recycle" }, { "name": "Cat food tin", "type": "recycle" }, { "name": "Dog food can", "type": "recycle" }, { "name": "Aluminum aerosol can", "type": "recycle" }, { "name": "Steel aerosol can", "type": "recycle" }, { "name": "Plastic spray bottle", "type": "recycle" }, { "name": "Paper placemat", "type": "recycle" }, { "name": "Paper plate (clean)", "type": "recycle" }, { "name": "Corrugated cardboard", "type": "recycle" }, { "name": "Polystyrene foam (where accepted)", "type": "recycle" }, { "name": "Plastic film bags", "type": "recycle" }, { "name": "Plastic produce container", "type": "recycle" }, { "name": "Ice pack (gel removed)", "type": "recycle" }, { "name": "Pill bottle", "type": "recycle" }, { "name": "Metal tin", "type": "recycle" }, { "name": "Candy wrapper (aluminum)", "type": "recycle" }, { "name": "Jewelry box", "type": "recycle" }, { "name": "Plastic shoe organizer", "type": "recycle" }, { "name": "Wine cork (natural)", "type": "recycle" }, { "name": "Paper receipt", "type": "recycle" }, { "name": "Gift card (PVC)", "type": "recycle" }, { "name": "Plastic storage bin", "type": "recycle" }, { "name": "Plastic basket", "type": "recycle" }, { "name": "Bubble wrap", "type": "recycle" }, { "name": "Foam block", "type": "recycle" }, { "name": "Aluminum siding", "type": "recycle" }, { "name": "Scrap wire", "type": "recycle" }, { "name": "Plastic pipe", "type": "recycle" }, { "name": "Metal shelving", "type": "recycle" }, { "name": "Plastic straws (check local rules)", "type": "recycle" }, { "name": "Paper straws", "type": "recycle" }, { "name": "Plastic laundry basket", "type": "recycle" }, { "name": "Plastic garden tools", "type": "recycle" }, { "name": "Old CDs", "type": "recycle" }, { "name": "DVDs", "type": "recycle" }, { "name": "Blu-ray discs", "type": "recycle" }, { "name": "Plastic lids", "type": "recycle" }, { "name": "Tin cookie box", "type": "recycle" }, { "name": "Old tools", "type": "recycle" }, { "name": "Electric cables", "type": "recycle" }, { "name": "Wire cutters", "type": "recycle" }, { "name": "Plastic wrap (certain kinds)", "type": "recycle" }, { "name": "Aluminum bike frame", "type": "recycle" }, { "name": "Metal lamp", "type": "recycle" }, { "name": "Plastic toys (clean)", "type": "recycle" }, { "name": "Foil balloons", "type": "recycle" }, { "name": "Paper lanterns", "type": "recycle" }, { "name": "Cardboard game box", "type": "recycle" }, 
+
+  { "name": "Apple core", "type": "compost" }, 
+
+  { "name": "Banana peel", "type": "compost" }, 
+
+  { "name": "Orange peels", "type": "compost" }, 
+
+  { "name": "Coffee grounds", "type": "compost" }, 
+
+  { "name": "Eggshells", "type": "compost" }, 
+
+  { "name": "Tea bags (non-plastic)", "type": "compost" }, 
+
+  { "name": "Vegetable scraps", "type": "compost" }, 
+
+  { "name": "Fruit scraps", "type": "compost" }, 
+
+  { "name": "Corn husks", "type": "compost" }, 
+
+  { "name": "Onion peels", "type": "compost" }, 
+
+  { "name": "Carrot tops", "type": "compost" }, 
+
+  { "name": "Celery leaves", "type": "compost" }, 
+
+  { "name": "Potato peels", "type": "compost" }, 
+
+  { "name": "Cucumber peels", "type": "compost" }, 
+
+  { "name": "Lettuce scraps", "type": "compost" }, 
+
+  { "name": "Tomato scraps", "type": "compost" }, 
+
+  { "name": "Avocado skin", "type": "compost" }, 
+
+  { "name": "Peach pits", "type": "compost" }, 
+
+  { "name": "Cherry pits", "type": "compost" }, 
+
+  { "name": "Melon rinds", "type": "compost" }, 
+
+  { "name": "Pineapple skin", "type": "compost" }, 
+
+  { "name": "Grape stems", "type": "compost" }, 
+
+  { "name": "Mango peels", "type": "compost" }, 
+
+  { "name": "Strawberry tops", "type": "compost" }, 
+
+  { "name": "Herb stems", "type": "compost" }, 
+
+  { "name": "Grass clippings", "type": "compost" }, 
+
+  { "name": "Dry leaves", "type": "compost" }, 
+
+  { "name": "Small twigs", "type": "compost" }, 
+
+  { "name": "Weeds (no seeds)", "type": "compost" }, 
+
+  { "name": "Garden trimmings", "type": "compost" }, 
+
+  { "name": "Old flowers", "type": "compost" }, 
+
+  { "name": "Hay", "type": "compost" }, 
+
+  { "name": "Straw", "type": "compost" }, 
+
+  { "name": "Wood chips", "type": "compost" }, 
+
+  { "name": "Sawdust (untreated)", "type": "compost" }, 
+
+  { "name": "Pine needles", "type": "compost" }, 
+
+  { "name": "Compostable napkins", "type": "compost" }, 
+
+  { "name": "Paper towels (unbleached)", "type": "compost" }, 
+
+  { "name": "Cardboard egg cartons", "type": "compost" }, 
+
+  { "name": "Newspaper (shredded)", "type": "compost" }, 
+
+  { "name": "Brown paper bags", "type": "compost" }, 
+
+  { "name": "Toilet paper rolls", "type": "compost" }, 
+
+  { "name": "Cereal boxes (plain)", "type": "compost" }, 
+
+  { "name": "Cotton balls (100% cotton)", "type": "compost" }, 
+
+  { "name": "Wool fibers", "type": "compost" }, 
+
+  { "name": "Feathers", "type": "compost" }, 
+
+  { "name": "Hair", "type": "compost" }, 
+
+  { "name": "Pet fur", "type": "compost" }, 
+
+  { "name": "Nail clippings", "type": "compost" }, 
+
+  { "name": "Compostable plates", "type": "compost" }, 
+
+  { "name": "Compostable utensils", "type": "compost" }, 
+
+  { "name": "Compostable coffee cups", "type": "compost" }, 
+
+  { "name": "Compostable coffee filters", "type": "compost" }, 
+
+  { "name": "Compostable food containers", "type": "compost" }, 
+
+  { "name": "Compostable sandwich bags", "type": "compost" }, 
+
+  { "name": "Compostable cling wrap", "type": "compost" }, 
+
+  { "name": "Used matches", "type": "compost" }, 
+
+  { "name": "Untreated wood shavings", "type": "compost" }, 
+
+  { "name": "Pencil shavings", "type": "compost" }, 
+
+  { "name": "Wine corks (natural)", "type": "compost" }, 
+
+  { "name": "Burlap", "type": "compost" }, 
+
+  { "name": "Cotton thread", "type": "compost" }, 
+
+  { "name": "Jute rope", "type": "compost" }, 
+
+  { "name": "Tea leaves", "type": "compost" }, 
+
+  { "name": "Expired herbs", "type": "compost" }, 
+
+  { "name": "Stale bread", "type": "compost" }, 
+
+  { "name": "Cooked rice", "type": "compost" }, 
+
+  { "name": "Cooked pasta", "type": "compost" }, 
+
+  { "name": "Spoiled vegetables", "type": "compost" }, 
+
+  { "name": "Spoiled fruits", "type": "compost" }, 
+
+  { "name": "Citrus peels", "type": "compost" }, 
+
+  { "name": "Nut shells", "type": "compost" }, 
+
+  { "name": "Pumpkin shells", "type": "compost" }, 
+
+  { "name": "Coconut husks", "type": "compost" }, 
+
+  { "name": "Shellfish shells", "type": "compost" }, 
+
+  { "name": "Fish bones", "type": "compost" }, 
+
+  { "name": "Chicken bones", "type": "compost" }, 
+
+  { "name": "Steak bones", "type": "compost" }, 
+
+  { "name": "Shrimp shells", "type": "compost" }, 
+
+  { "name": "Oyster shells", "type": "compost" }, 
+
+  { "name": "Clam shells", "type": "compost" }, 
+
+  { "name": "Parchment paper", "type": "compost" }, 
+
+  { "name": "Cheese rinds", "type": "compost" }, 
+
+  { "name": "Spoiled yogurt", "type": "compost" }, 
+
+  { "name": "Dairy products (small amounts)", "type": "compost" }, 
+
+  { "name": "Sour milk", "type": "compost" }, 
+
+  { "name": "Moldy bread", "type": "compost" }, 
+
+  { "name": "Used cooking oil (small amounts)", "type": "compost" }, 
+
+  { "name": "Corn cobs", "type": "compost" }, 
+
+  { "name": "Old herbs and spices", "type": "compost" }, 
+
+  { "name": "Leftover popcorn", "type": "compost" }, 
+
+  { "name": "Paper muffin cups", "type": "compost" }, 
+
+  { "name": "Compostable sponges", "type": "compost" }, 
+
+  { "name": "Cardboard drink holders", "type": "compost" }, 
+
+  { "name": "Paper egg trays", "type": "compost" }, 
+
+  { "name": "Pizza boxes (greasy parts)", "type": "compost" }, 
+
+  { "name": "Ice cream cones", "type": "compost" }, 
+
+  { "name": "Cornstarch-based packaging", "type": "compost" }, 
+
+  { "name": "Sugarcane bagasse", "type": "compost" }, 
+
+  { "name": "Paper takeout containers", "type": "compost" }, 
+
+  { "name": "Popsicle sticks", "type": "compost" }, 
+
+  { "name": "Leaves from houseplants", "type": "compost" }, 
+
+  { "name": "Pruned branches", "type": "compost" }, { "name": "Plastic wrap", "type": "general waste" }, { "name": "Broken mirror", "type": "general waste" }, { "name": "Used tissues", "type": "general waste" }, { "name": "Used bandages", "type": "general waste" }, { "name": "Cigarette butts", "type": "general waste" }, { "name": "Disposable razors", "type": "general waste" }, { "name": "Used cotton swabs", "type": "general waste" }, { "name": "Toothpaste tube", "type": "general waste" }, { "name": "Chewing gum", "type": "general waste" }, { "name": "Used diapers", "type": "general waste" }, { "name": "Used feminine hygiene products", "type": "general waste" }, { "name": "Foam takeaway container", "type": "general waste" }, { "name": "Styrofoam cup", "type": "general waste" }, { "name": "Plastic straws", "type": "general waste" }, { "name": "Broken ceramics", "type": "general waste" }, { "name": "Old toothbrush", "type": "general waste" }, { "name": "Used dental floss", "type": "general waste" }, { "name": "Single-use coffee pods", "type": "general waste" }, { "name": "Plastic-lined coffee cups", "type": "general waste" }, { "name": "Used cooking oil", "type": "general waste" }, { "name": "Plastic food wrappers", "type": "general waste" }, { "name": "Candy wrappers", "type": "general waste" }, { "name": "Used sticky notes", "type": "general waste" }, { "name": "Chip bags", "type": "general waste" }, { "name": "Plastic cutlery", "type": "general waste" }, { "name": "Broken pen", "type": "general waste" }, { "name": "Expired medication (unflushable)", "type": "general waste" }, { "name": "Vacuum cleaner bag", "type": "general waste" }, { "name": "Broken light bulb", "type": "general waste" }, { "name": "Old sponges", "type": "general waste" }, { "name": "Plastic shopping bag", "type": "general waste" }, { "name": "Rubber bands", "type": "general waste" }, { "name": "Broken hairbrush", "type": "general waste" }, { "name": "Bubble wrap", "type": "general waste" }, { "name": "Synthetic fabric scraps", "type": "general waste" }, { "name": "Packaging peanuts", "type": "general waste" }, { "name": "Old wallpaper", "type": "general waste" }, { "name": "Used gift wrap", "type": "general waste" }, { "name": "Old mouse pad", "type": "general waste" }, { "name": "Used ink cartridges", "type": "general waste" }, { "name": "Broken charger cable", "type": "general waste" }, { "name": "Old SIM card", "type": "general waste" }, { "name": "Broken phone case", "type": "general waste" }, { "name": "Expired makeup", "type": "general waste" }, { "name": "Disposable face masks", "type": "general waste" }, { "name": "Nail polish bottles", "type": "general waste" }, { "name": "Used latex gloves", "type": "general waste" }, { "name": "Old keychain", "type": "general waste" }, { "name": "Broken plastic toy", "type": "general waste" }, { "name": "Old headphones", "type": "general waste" }, { "name": "Used batteries (non-rechargeable)", "type": "general waste" }, { "name": "Plastic bread ties", "type": "general waste" }, { "name": "Old ID cards", "type": "general waste" }, { "name": "Plastic produce netting", "type": "general waste" }, { "name": "Broken plastic frame", "type": "general waste" }, { "name": "Single-use plastic gloves", "type": "general waste" }, { "name": "Plastic plant tags", "type": "general waste" }, { "name": "Plastic tape", "type": "general waste" }, { "name": "Expired gift cards", "type": "general waste" }, { "name": "Used dryer sheets", "type": "general waste" }, { "name": "Plastic bottle caps", "type": "general waste" }, { "name": "Broken zipper", "type": "general waste" }, { "name": "Old shoelaces", "type": "general waste" }, { "name": "Used paint rollers", "type": "general waste" }, { "name": "Expired air freshener can", "type": "general waste" }, { "name": "Used makeup wipes", "type": "general waste" }, { "name": "Old lanyard", "type": "general waste" }, { "name": "Expired chewing gum", "type": "general waste" }, { "name": "Plastic food storage containers", "type": "general waste" }, { "name": "Used balloons", "type": "general waste" }, { "name": "Plastic utensils", "type": "general waste" }, { "name": "Used coffee filters", "type": "general waste" }, { "name": "Expired vitamins", "type": "general waste" }, { "name": "Plastic earbuds", "type": "general waste" }, { "name": "Used water filters", "type": "general waste" }, { "name": "Old rubber hose", "type": "general waste" }, { "name": "Broken power strip", "type": "general waste" }, { "name": "Used mop head", "type": "general waste" }, { "name": "Plastic shower curtain", "type": "general waste" }, { "name": "Broken remote control", "type": "general waste" }, { "name": "Old umbrella", "type": "general waste" }, { "name": "Broken sunglasses", "type": "general waste" }, { "name": "Used chapstick", "type": "general waste" }, { "name": "Old calendar", "type": "general waste" }, { "name": "Expired sunscreen", "type": "general waste" }, { "name": "Old candles", "type": "general waste" }, { "name": "Used kitchen sponge", "type": "general waste" }, { "name": "Plastic cable ties", "type": "general waste" }, { "name": "Broken clock", "type": "general waste" }, { "name": "Old garden hose", "type": "general waste" }, { "name": "Used earplugs", "type": "general waste" }, { "name": "Broken water bottle", "type": "general waste" }, { "name": "Plastic lids", "type": "general waste" }, { "name": "Old car air freshener", "type": "general waste" }, { "name": "Plastic rulers", "type": "general waste" }, { "name": "Old binder", "type": "general waste" }, { "name": "Used dish sponges", "type": "general waste" }, { "name": "Broken plastic bucket", "type": "general waste" }, { "name": "Damaged plastic bins", "type": "general waste" }, { "name": "Old cleaning brushes", "type": "general waste" }, { "name": "Used scouring pads", "type": "general waste" }, { "name": "Plastic shower caddy", "type": "general waste" }, { "name": "Broken garden tools", "type": "general waste" }, { "name": "Plastic coat hangers", "type": "general waste" }, { "name": "Broken toy parts", "type": "general waste" }, { "name": "Plastic mailing envelopes", "type": "general waste" }, { "name": "Old phone cases", "type": "general waste" }, { "name": "Plastic key covers", "type": "general waste" }, { "name": "Plastic egg cartons", "type": "general waste" }, { "name": "Plastic bubble mailers", "type": "general waste" }, { "name": "Damaged pool noodles", "type": "general waste" }, { "name": "Old DVDs", "type": "general waste" }, { "name": "Old smartphone", "type": "electronic waste" }, { "name": "Broken tablet", "type": "electronic waste" }, { "name": "Damaged laptop", "type": "electronic waste" }, { "name": "Desktop computer", "type": "electronic waste" }, { "name": "CRT monitor", "type": "electronic waste" }, { "name": "LCD monitor", "type": "electronic waste" }, { "name": "Old keyboard", "type": "electronic waste" }, { "name": "Used mouse", "type": "electronic waste" }, { "name": "Broken printer", "type": "electronic waste" }, { "name": "Used ink cartridge", "type": "electronic waste" }, { "name": "Old router", "type": "electronic waste" }, { "name": "Modem", "type": "electronic waste" }, { "name": "Wireless adapter", "type": "electronic waste" }, { "name": "External hard drive", "type": "electronic waste" }, { "name": "Flash drive", "type": "electronic waste" }, { "name": "CD player", "type": "electronic waste" }, { "name": "DVD player", "type": "electronic waste" }, { "name": "Blu-ray player", "type": "electronic waste" }, { "name": "Old TV remote", "type": "electronic waste" }, { "name": "Damaged TV", "type": "electronic waste" }, { "name": "Old stereo system", "type": "electronic waste" }, { "name": "Speakers", "type": "electronic waste" }, { "name": "Amplifier", "type": "electronic waste" }, { "name": "Game console", "type": "electronic waste" }, { "name": "Video game controller", "type": "electronic waste" }, { "name": "Handheld gaming device", "type": "electronic waste" }, { "name": "VR headset", "type": "electronic waste" }, { "name": "Old headphones", "type": "electronic waste" }, { "name": "Earbuds", "type": "electronic waste" }, { "name": "Smartwatch", "type": "electronic waste" }, { "name": "Fitness tracker", "type": "electronic waste" }, { "name": "Portable projector", "type": "electronic waste" }, { "name": "Digital camera", "type": "electronic waste" }, { "name": "Camcorder", "type": "electronic waste" }, { "name": "Old smartphone charger", "type": "electronic waste" }, { "name": "Laptop charger", "type": "electronic waste" }, { "name": "Power strip", "type": "electronic waste" }, { "name": "Old cables", "type": "electronic waste" }, { "name": "Ethernet cable", "type": "electronic waste" }, { "name": "HDMI cable", "type": "electronic waste" }, { "name": "VGA cable", "type": "electronic waste" }, { "name": "USB cable", "type": "electronic waste" }, { "name": "Portable DVD player", "type": "electronic waste" }, { "name": "E-book reader", "type": "electronic waste" }, { "name": "Electric toothbrush", "type": "electronic waste" }, { "name": "Electric shaver", "type": "electronic waste" }, { "name": "Hair dryer", "type": "electronic waste" }, { "name": "Flat iron", "type": "electronic waste" }, { "name": "Electric kettle", "type": "electronic waste" }, { "name": "Microwave oven", "type": "electronic waste" }, { "name": "Coffee maker", "type": "electronic waste" }, { "name": "Blender", "type": "electronic waste" }, { "name": "Toaster", "type": "electronic waste" }, { "name": "Vacuum cleaner", "type": "electronic waste" }, { "name": "Air purifier", "type": "electronic waste" }, { "name": "Electric fan", "type": "electronic waste" }, { "name": "Space heater", "type": "electronic waste" }, { "name": "Smart speaker", "type": "electronic waste" }, { "name": "Smart bulb", "type": "electronic waste" }, { "name": "Smart thermostat", "type": "electronic waste" }, { "name": "Smart doorbell", "type": "electronic waste" }, { "name": "Smart security camera", "type": "electronic waste" }, { "name": "Portable power bank", "type": "electronic waste" }, { "name": "Old GPS device", "type": "electronic waste" }, { "name": "Electronic dictionary", "type": "electronic waste" }, { "name": "Digital photo frame", "type": "electronic waste" }, { "name": "Old drone", "type": "electronic waste" }, { "name": "Robot vacuum", "type": "electronic waste" }, { "name": "Electric scooter", "type": "electronic waste" }, { "name": "Hoverboard", "type": "electronic waste" }, { "name": "Old smart glasses", "type": "electronic waste" }, { "name": "Broken calculator", "type": "electronic waste" }, { "name": "Portable radio", "type": "electronic waste" }, { "name": "Satellite receiver", "type": "electronic waste" }, { "name": "Old answering machine", "type": "electronic waste" }, { "name": "Pager", "type": "electronic waste" }, { "name": "Old alarm clock", "type": "electronic waste" }, { "name": "Electronic toy", "type": "electronic waste" }, { "name": "Smart lock", "type": "electronic waste" }, { "name": "Electric lawn mower", "type": "electronic waste" }, { "name": "Electric hedge trimmer", "type": "electronic waste" }, { "name": "Electric drill", "type": "electronic waste" }, { "name": "Electric screwdriver", "type": "electronic waste" }, { "name": "Electric saw", "type": "electronic waste" }, { "name": "Electric sander", "type": "electronic waste" }, { "name": "Multimeter", "type": "electronic waste" }, { "name": "Oscilloscope", "type": "electronic waste" }, { "name": "Broken smartwatch charger", "type": "electronic waste" }, { "name": "Home automation hub", "type": "electronic waste" }, { "name": "Used projector lamp", "type": "electronic waste" }, { "name": "Portable CD player", "type": "electronic waste" }, { "name": "Old video camera", "type": "electronic waste" }, { "name": "Worn-out surge protector", "type": "electronic waste" }, { "name": "Old network switch", "type": "electronic waste" }, { "name": "Server rack equipment", "type": "electronic waste" }, { "name": "Telecommunication equipment", "type": "electronic waste" }, { "name": "Obsolete hard drives", "type": "electronic waste" }, { "name": "Old motherboard", "type": "electronic waste" }, { "name": "Broken graphics card", "type": "electronic waste" }, { "name": "Power supply unit", "type": "electronic waste" }, { "name": "Cooling fans", "type": "electronic waste" }, { "name": "CPU cooler", "type": "electronic waste" }, { "name": "RAM modules", "type": "electronic waste" }, { "name": "Old SIM card reader", "type": "electronic waste" }, { "name": "POS system", "type": "electronic waste" }, { "name": "Barcode scanner", "type": "electronic waste" }, { "name": "Thermal printer", "type": "electronic waste" }, { "name": "Old fax machine", "type": "electronic waste" }, { "name": "Cash register", "type": "electronic waste" }, { "name": "Used motor oil", "type": "hazardous waste" }, { "name": "Antifreeze", "type": "hazardous waste" }, { "name": "Brake fluid", "type": "hazardous waste" }, { "name": "Transmission fluid", "type": "hazardous waste" }, { "name": "Car batteries", "type": "hazardous waste" }, { "name": "Lead-acid batteries", "type": "hazardous waste" }, { "name": "Lithium-ion batteries", "type": "hazardous waste" }, { "name": "Ni-Cd batteries", "type": "hazardous waste" }, { "name": "Alkaline batteries", "type": "hazardous waste" }, { "name": "Old paint cans", "type": "hazardous waste" }, { "name": "Paint thinners", "type": "hazardous waste" }, { "name": "Turpentine", "type": "hazardous waste" }, { "name": "Wood varnish", "type": "hazardous waste" }, { "name": "Epoxy", "type": "hazardous waste" }, { "name": "Adhesives", "type": "hazardous waste" }, { "name": "Glue solvents", "type": "hazardous waste" }, { "name": "Pesticides", "type": "hazardous waste" }, { "name": "Herbicides", "type": "hazardous waste" }, { "name": "Fungicides", "type": "hazardous waste" }, { "name": "Insecticides", "type": "hazardous waste" }, { "name": "Rodent poison", "type": "hazardous waste" }, { "name": "Weed killer", "type": "hazardous waste" }, { "name": "Pool chemicals", "type": "hazardous waste" }, { "name": "Chlorine tablets", "type": "hazardous waste" }, { "name": "Muriatic acid", "type": "hazardous waste" }, { "name": "Household bleach", "type": "hazardous waste" }, { "name": "Ammonia", "type": "hazardous waste" }, { "name": "Drain cleaner", "type": "hazardous waste" }, { "name": "Oven cleaner", "type": "hazardous waste" }, { "name": "Toilet bowl cleaner", "type": "hazardous waste" }, { "name": "Aerosol cans (full)", "type": "hazardous waste" }, { "name": "Compressed gas cylinders", "type": "hazardous waste" }, { "name": "Propane tanks", "type": "hazardous waste" }, { "name": "Fire extinguishers", "type": "hazardous waste" }, { "name": "Mercury thermometers", "type": "hazardous waste" }, { "name": "Mercury barometers", "type": "hazardous waste" }, { "name": "Fluorescent light bulbs", "type": "hazardous waste" }, { "name": "CFL bulbs", "type": "hazardous waste" }, { "name": "UV lamps", "type": "hazardous waste" }, { "name": "PCB-containing transformers", "type": "hazardous waste" }, { "name": "Refrigerants", "type": "hazardous waste" }, { "name": "Freon", "type": "hazardous waste" }, { "name": "Medical sharps", "type": "hazardous waste" }, { "name": "Syringes", "type": "hazardous waste" }, { "name": "Expired medications", "type": "hazardous waste" }, { "name": "Pharmaceuticals", "type": "hazardous waste" }, { "name": "Veterinary medications", "type": "hazardous waste" }, { "name": "Disinfectants", "type": "hazardous waste" }, { "name": "Radioactive waste", "type": "hazardous waste" }, { "name": "X-ray film", "type": "hazardous waste" }, { "name": "Lead shielding", "type": "hazardous waste" }, { "name": "Old smoke detectors", "type": "hazardous waste" }, { "name": "Asbestos materials", "type": "hazardous waste" }, { "name": "Oil-based paints", "type": "hazardous waste" }, { "name": "Fuel filters", "type": "hazardous waste" }, { "name": "Used fuel containers", "type": "hazardous waste" }, { "name": "Gasoline", "type": "hazardous waste" }, { "name": "Diesel fuel", "type": "hazardous waste" }, { "name": "Kerosene", "type": "hazardous waste" }, { "name": "Lubricants", "type": "hazardous waste" }, { "name": "Hydraulic fluid", "type": "hazardous waste" }, { "name": "Engine oil filters", "type": "hazardous waste" }, { "name": "Used cleaning solvents", "type": "hazardous waste" }, { "name": "Degreasers", "type": "hazardous waste" }, { "name": "Toxic dyes", "type": "hazardous waste" }, { "name": "Nail polish remover", "type": "hazardous waste" }, { "name": "Ethanol", "type": "hazardous waste" }, { "name": "Isopropyl alcohol", "type": "hazardous waste" }, { "name": "Methanol", "type": "hazardous waste" }, { "name": "Pesticide containers", "type": "hazardous waste" }, { "name": "Ink solvents", "type": "hazardous waste" }, { "name": "Photo chemicals", "type": "hazardous waste" }, { "name": "Darkroom chemicals", "type": "hazardous waste" }, { "name": "Battery acid", "type": "hazardous waste" }, { "name": "Lye", "type": "hazardous waste" }, { "name": "Caustic soda", "type": "hazardous waste" }, { "name": "Phenol", "type": "hazardous waste" }, { "name": "Benzene", "type": "hazardous waste" }, { "name": "Toluene", "type": "hazardous waste" }, { "name": "Xylene", "type": "hazardous waste" }, { "name": "Acetone", "type": "hazardous waste" }, { "name": "Formaldehyde", "type": "hazardous waste" }, { "name": "Hydrochloric acid", "type": "hazardous waste" }, { "name": "Sulfuric acid", "type": "hazardous waste" }, { "name": "Nitric acid", "type": "hazardous waste" }, { "name": "Phosphoric acid", "type": "hazardous waste" }, { "name": "Chromium waste", "type": "hazardous waste" }, { "name": "Arsenic waste", "type": "hazardous waste" }, { "name": "Cadmium waste", "type": "hazardous waste" }, { "name": "Electronic waste (circuit boards)", "type": "hazardous waste" }, { "name": "Inkjet printer cartridges", "type": "hazardous waste" }, { "name": "Toner cartridges", "type": "hazardous waste" }, { "name": "Chemical fertilizers", "type": "hazardous waste" }, { "name": "Explosives", "type": "hazardous waste" }, { "name": "Ammunition", "type": "hazardous waste" }, { "name": "Fireworks", "type": "hazardous waste" }, { "name": "Ether", "type": "hazardous waste" }, { "name": "Solvent-based adhesives", "type": "hazardous waste" }, { "name": "Car wax", "type": "hazardous waste" }, { "name": "Metal polish", "type": "hazardous waste" }, { "name": "Disinfectant wipes", "type": "hazardous waste" }] 

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Waste by Name</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="script.js" defer></script> 
+</head>
+<body>
+
+       <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="search_by_name.html" class="nav-item">Search by Name</a>
+            <a href="calc.html" class="nav-item">Calculate Carbon Footprint</a>
+            <a href="articles.html" class="nav-item">Leaderboard</a>
+            <button class="nav-toggle" id="navToggle">☰</button>
+        </div>
+        <div class="navbar-links" id="navbarLinks">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="search_by_name.html" class="nav-item">Search by Name</a>
+            <a href="calc.html" class="nav-item">Carbon Footprint</a>
+            <a href="articles.html" class="nav-item">Leaderboard</a>
+        </div>
+    </nav>
+
+    <section id="searchByNameSection" class="search-by-name">
+        <h2>Search Waste by Name</h2>
+        <div class="search-box">
+            <input type="text" id="wasteSearchInput" placeholder="Enter waste name" />
+            <button onclick="searchWasteByName()">Search</button>
+        </div>
+        <div id="searchResults" class="search-results"></div>
+    </section>
+</body>
+</html>
